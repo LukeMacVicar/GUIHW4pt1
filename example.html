@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="css/c02.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div class="main-layout">
+        <aside class="left-panel">
+          <section class="calculator" aria-labelledby="calcHeading">
+            <h2 id="calcHeading">Please enter the table ranges</h2>
+            <form id="form" class="number-form" novalidate>
+          <div class="range-fields">
+            <label for="n1"><span class="label-text">Minimum Column Value</span>
+              <input type="number" id="n1" name="n1" placeholder="" required aria-describedby="err-n1" aria-invalid="false" />
+              <span class="error-msg" id="err-n1" role="status" aria-live="polite"></span>
+            </label>
+            <label for="n2"><span class="label-text">Maximum Column Value</span>
+              <input type="number" id="n2" name="n2" placeholder="" required aria-describedby="err-n2" aria-invalid="false" />
+              <span class="error-msg" id="err-n2" role="status" aria-live="polite"></span>
+            </label>
+            <label for="n3"><span class="label-text">Minimum Row Value</span>
+              <input type="number" id="n3" name="n3" placeholder="" required aria-describedby="err-n3" aria-invalid="false" />
+              <span class="error-msg" id="err-n3" role="status" aria-live="polite"></span>
+            </label>
+            <label for="n4"><span class="label-text">Maximum Row Value</span>
+              <input type="number" id="n4" name="n4" placeholder="" required aria-describedby="err-n4" aria-invalid="false" />
+              <span class="error-msg" id="err-n4" role="status" aria-live="polite"></span>
+            </label>
+          </div>
+          <div class="actions">
+            <button type="submit" id="submitBtn" class="primary">Submit</button>
+          </div>
+              <div id="result" class="result" aria-live="polite"></div>
+            </form>
+          </section>
+        </aside>
+
+        <main class="right-panel">
+          <div id="multiplicationTable" class="multiplication" aria-live="polite"></div>
+        </main>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="js/example.js"></script>
+</body>
+</html>
